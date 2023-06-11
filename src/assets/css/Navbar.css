@@ -1,0 +1,36 @@
+#logo{
+    width: 65px;
+}
+
+#Navitem{
+    font-size: 18px;
+    color: #949494;
+    font-weight: 600;
+}
+
+#navbutton{
+    color: white;
+        padding: 10px;
+        border-radius: 10px;
+}
+
+#menuicon{
+    margin-top: 50%;
+    font-size: 30px;
+    color: white;
+}
+
+#closeicon{
+    margin-top: 40px;
+    margin-left: 80%;
+    color: white !important;
+}
+
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper{
+    background-color: black !important;
+    width: 400px;
+}
+#navitem2{
+    margin: 10px;
+    color: white;
+}
