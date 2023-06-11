@@ -46,20 +46,6 @@
     animation: faulty-flicker 2s linear infinite;
 }
 
-.glowing-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0.7;
-    filter: blur(1em);
-    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
-    background: var(--glow-color);
-    pointer-events: none;
-}
-
 .glowing-btn::after {
     content: "";
     position: absolute;

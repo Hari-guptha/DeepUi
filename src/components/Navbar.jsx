@@ -28,7 +28,7 @@ const Navbar = () => {
                     <Box>
                         <MenuIcon sx={{ display: { sm: "none", xs: "block" } }} id="menuicon" onClick={e => (setfun(true))} />
                         <Box sx={{width:"80px",display: { sm: "block", xs: "none" }}}>
-                    <div className='glowing-btn' ><FaceRetouchingNaturalIcon sx={{paddingTop: "5px", fontSize: "40px" }} /></div>
+                    <div className='glowing-btn' ><FaceRetouchingNaturalIcon sx={{paddingTop: "5px", fontSize: "30px",marginLeft:"5%" }} /></div>
                     </Box> 
                     </Box>
                 </Box>
