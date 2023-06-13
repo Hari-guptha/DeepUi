@@ -1,0 +1,76 @@
+#phone{
+    display: flex;
+    gap: 15%;
+    margin:10px 10%;
+    margin-bottom: 8%;
+}
+#phoneimg{
+    width: 25vw;
+    position: fixed;
+}
+#ptitle1{
+    font-size: 84px;
+    font-weight: 800;
+    color: #787777;
+    width:300px;
+    line-height: 100%;
+}
+#ptitle2{
+    font-size: 40px;
+    color: white;
+    font-weight: 500;
+
+}
+#ptitle3{
+    font-size: 20px;
+    color: #787777;
+    font-weight: 500;
+
+}
+
+.icons{
+    color: white;
+    font-size: 40px !important;
+}
+
+#data{
+    margin:10% 1% 0 5%;
+}
+
+#pq{
+    font-size: 15px;
+    color: #787777;
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 600px){
+    #ptitle1{
+        font-size:50px ;
+        width: 100%;
+    }
+    #ptitle2{
+        font-size:20px;
+    }
+    #ptitle3{
+        font-size: 15px;
+    }
+    #pq{
+        margin: 30px 1%;
+    }
+    #data{
+        margin:10% 1% 0 1%;
+    }
+    .icons{
+        font-size: 25px !important;
+        margin: 0 5px;
+    }
+    #phone{
+        flex-direction: column;
+    }
+    #phoneimg{
+        position: relative;
+        width: 80vw !important;
+        left: 3% !important;
+    }
+}

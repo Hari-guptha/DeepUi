@@ -8,13 +8,19 @@
 }
 
 #fimg{
-    width: 50%;
+    width: 30%;
+    margin-left:15% ;
 }
 
 #ftitle{
  color: var(--blackft);
  font-weight: 600;
  margin: 10px 0px 0px 22%;
+}
+#ftitle1{
+    color: var(--blackft);
+    font-weight: 600;
+    width: 300px;
 }
 
 #center{
@@ -34,6 +40,20 @@
     color: var(--blackft);
     font-size: 20px;
 }
+#fimg2 {
+    width: 80%;
+    margin-left: 15%;
+}
+#part22{
+    margin: 1% 5% 0 0%;
+    width: 30vw;
+    font-size: 12px;
+}
+
+#part12{
+    width: 20vw;
+}
+
 
 @media only screen and (max-width: 600px){
     #part1{
@@ -59,5 +79,14 @@
     }
     #fi{
         justify-content: center;
+    }
+    #fimg2{
+        width: 90vw;
+    }
+    #part22{
+        padding: 0px 20%;
+    }
+    #part2{
+        padding-top: 30%;
     }
 }

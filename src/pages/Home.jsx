@@ -1,15 +1,14 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import Main from '../components/Main'
-import Footer from '../components/footer'
-
+import Footer from '../components/Footer'
+import '../assets/css/footer.css'
+import hire from '../assets/img/text4.png'
 
 const Home = () => {
     return (
         <>
-        <Navbar/>
-        <Main/>
-        <Footer/>
+        <Main />
+        <Footer image={hire} struct={'home'} />
         </>
     )
 }
