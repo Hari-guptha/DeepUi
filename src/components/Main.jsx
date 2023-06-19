@@ -22,7 +22,7 @@ const Main = () => {
                             <Link to="/phone">
                                 <div id='card' className='glow-on-hover' style={{ width: "25vw", height: "220px", marginRight: "250px" }} >
                                     <div>
-                                        <h5 id='ctext' >Nito G1</h5>
+                                        <h5 id='ctext' >MORA</h5>
                                         <img id='cardimg' src={img1} alt="" />
                                     </div>
                                     <div id='cardright'>
@@ -36,7 +36,7 @@ const Main = () => {
                             <Link to="/lap">
                                 <div id='card' className='glow-on-hover' style={{ marginLeft: "140px", width: "38vw", marginRight: "0%" }}>
                                     <div>
-                                        <h5 id='ctext' >Vito</h5>
+                                        <h5 id='ctext' >CORA</h5>
                                         <img id='cardimg2' src={img2} alt="" />
                                     </div>
                                     <div id='cardright'>
@@ -48,7 +48,7 @@ const Main = () => {
                             <Link to="/pc">
                                 <div id='card' className='glow-on-hover' style={{ width: "35vw", marginRight: "50px", marginLeft: "20px" }} >
                                     <div>
-                                        <h5 id='ctext' >Gito </h5>
+                                        <h5 id='ctext' >NORA</h5>
                                         <img id='cardimg3' src={img3} alt="" />
                                     </div>
                                     <div id='cardright'>

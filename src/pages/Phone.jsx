@@ -7,7 +7,7 @@ import phone from '../assets/img/product/phone.png'
 const Phone = () => {
     return (
         <>
-        <Main2 image={phone} title1={'Nito G1'} title2={'RS 90,000'} title3={'Features'}  />
+        <Main2 image={phone} title1={'MORA'} title2={'RS 90,000'} title3={'Features'}  />
         <Footer image={fphone} struct={'Product'} />
         </>
     )

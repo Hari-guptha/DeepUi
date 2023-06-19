@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import '../assets/css/footer.css'
 import hire from '../assets/img/text4.png'
 
+
 const Home = () => {
     return (
         <>

@@ -1,9 +1,9 @@
 body {
-    background: rgb(0,0,0);
-background: linear-gradient(315deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 88%, rgba(70,70,70,1) 100%);
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
 }
-a{
+
+a {
     text-decoration: none;
 }
