@@ -8,27 +8,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import {useDispatch} from 'react-redux'
-import {status} from '../features/color'
+
 
 const Navbar = () => {
-    const dispatch = useDispatch()
     const [fun, setfun] = useState(false)
-    const [emotionLabel, setEmotionLabel] = useState('');
-    useEffect(() => {
-        const getEmotionLabel = async () => {
-            try {
-                const response = await fetch('http://127.0.0.1:5000/get_emotion');
-                const data = await response.json();
-                setEmotionLabel(data.emotion_label);
-                dispatch(status({ emotion: data.emotion_label }))
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        const interval = setInterval(getEmotionLabel, 1000);
-        return () => clearInterval(interval);
-    }, []);
+    const [face, setface] = useState(true)
     return (
         <>
             <Box sx={{ display: "flex", justifyContent: "space-between", padding: { sm: "30px 10%", xs: "30px 30px" } }}>
@@ -46,7 +30,7 @@ const Navbar = () => {
                     <Box>
                         <MenuIcon sx={{ display: { sm: "none", xs: "block" } }} id="menuicon" onClick={e => (setfun(true))} />
                         <Box sx={{ width: "80px", display: { sm: "block", xs: "none" } }}>
-                            <div className='glowing-btn' ><FaceRetouchingNaturalIcon sx={{ paddingTop: "5px", fontSize: "30px", marginLeft: "5%" }} /></div>
+                            <div className='glowing-btn' onClick={e => (setface(!face))} ><FaceRetouchingNaturalIcon sx={{ paddingTop: "5px", fontSize: "30px", marginLeft: "5%" }} /></div>
                         </Box>
                     </Box>
                 </Box>

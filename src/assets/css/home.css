@@ -80,7 +80,7 @@
     }
 
     #card {
-        width:80%;
+        width: 80%;
         margin: 5% 10%;
         padding: 10px;
         border-radius: 10px;
@@ -95,11 +95,13 @@
         color: white;
         font-size: 20px;
     }
-    #pcardimg{
+
+    #pcardimg {
         width: 50%;
-        margin-left:25% ;
+        margin-left: 25%;
     }
-    #space{
+
+    #space {
         margin-bottom: 100px;
     }
 }

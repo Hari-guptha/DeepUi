@@ -8,6 +8,7 @@ import Lap from './pages/Lap';
 import Pc from './pages/Pc';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import Soc from './features/Socket';
 
 function App() {
   const emotion = useSelector((state) => state.color.value.status.emotion);
@@ -45,6 +46,7 @@ function App() {
 
   return (
     <>
+    <Soc/>
       <Navbar />
       <Routes>
         <Route path="/" element={[<Home />]} />
