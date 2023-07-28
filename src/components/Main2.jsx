@@ -7,13 +7,13 @@ const Main2 = (props) => {
     return (
         <div id='phone'>
             <div id='data'>
-                <p id='ptitle1' >{props.title1}</p>
-                <p id='ptitle2' >{props.title2}</p>
-                <p id='ptitle3' >{props.title3}</p>
-                <div style={{display:'flex',gap:{sm:"30px",xs:"5px"},marginTop:"20px"}}>
-                    <MemoryIcon className='icons' /><CameraIcon className='icons'/><AppShortcutIcon className='icons'/>
+                <p className='Navitem'  id='ptitle1' >{props.title1}</p>
+                <p className='Navitem'  id='ptitle2'>{props.title2}</p>
+                <p className='Navitem'  id='ptitle3'>{props.title3}</p>
+                <div  style={{display:'flex',gap:{sm:"30px",xs:"5px"},marginTop:"20px"}}>
+                    <MemoryIcon className='Navitem' id='icons' /><CameraIcon className='Navitem' id='icons'/><AppShortcutIcon className='Navitem' id='icons'/>
                 </div>
-                <p id='pq' >Design is not just what it looks like and feels like. Design is how it works</p>
+                <p id='pq' className='Navitem' >Design is not just what it looks like and feels like. Design is how it works</p>
             </div>
             <div id='img' >
                 <img id='phoneimg' style={{width:props.swidth,left:props.left,marginTop:props.mtop}} src={props.image} alt="" />

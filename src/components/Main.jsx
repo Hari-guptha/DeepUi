@@ -10,6 +10,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import StarsIcon from '@mui/icons-material/Stars';
 import { Link } from 'react-router-dom'
 
+
 const Main = () => {
     return (
         <>
@@ -18,7 +19,7 @@ const Main = () => {
                 <div style={{ display: "flex" }} >
                     <Stack direction={'column'} sx={{ margin: "0 0 3% 0 ", width: "90vw" }} >
                         <div id='box'>
-                            <p id='titleh' >Welcome to DEEP UI</p>
+                            <p id='titleh' className='titleh' >Welcome to DEEP UI</p>
                             <Link to="/phone">
                                 <div id='card' className='glow-on-hover' style={{ width: "25vw", height: "220px", marginRight: "250px" }} >
                                     <div>

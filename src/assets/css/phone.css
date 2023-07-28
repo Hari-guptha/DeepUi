@@ -9,26 +9,26 @@
     position: fixed;
 }
 #ptitle1{
-    font-size: 84px;
-    font-weight: 800;
-    color: #787777;
-    width:300px;
-    line-height: 100%;
+    font-size: 84px !important;
+    font-weight: 800 !important;
+    color: #787777 ;
+    width:300px !important;
+    line-height: 100% !important;
 }
 #ptitle2{
-    font-size: 40px;
+    font-size: 40px !important;
     color: white;
-    font-weight: 500;
+    font-weight: 500 !important;
 
 }
 #ptitle3{
-    font-size: 20px;
-    color: #787777;
-    font-weight: 500;
+    font-size: 20px !important;
+    color: #787777 ;
+    font-weight: 500 !important;
 
 }
 
-.icons{
+#icons{
     color: white;
     font-size: 40px !important;
 }

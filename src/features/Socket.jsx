@@ -5,7 +5,8 @@ import { status } from '../features/color';
 
 const socket = io('http://localhost:5000'); // Replace with your Flask server URL
 
-function Soc() {
+function Soc({ isCameraOn }) {
+  console.log(isCameraOn)
   const constraints = { video: true, audio: false };
   const dispatch = useDispatch();
   const [emotionLabel, setEmotionLabel] = useState('');
@@ -17,7 +18,7 @@ function Soc() {
   useEffect(() => {
     // Function to capture frames from the webcam and send to the server
     const sendWebcamFeed = () => {
-      if (!isSending && videoRef.current) {
+      if (isCameraOn && !isSending && videoRef.current) {
         setIsSending(true);
 
         // Get the video element and its canvas
@@ -32,6 +33,8 @@ function Soc() {
         socket.emit('video_feed_from_client', dataURL); // Send data URL (video feed) to the server
 
         setIsSending(false);
+      } else {
+        console.log('camera off');
       }
     };
 
@@ -39,7 +42,7 @@ function Soc() {
     return () => {
       clearInterval(intervalId);
     };
-  }, [isSending]);
+  }, [isSending, isCameraOn]);
 
   // Listen for server response (label) from the Flask server
   useEffect(() => {
@@ -52,21 +55,35 @@ function Soc() {
 
   // Handle webcam stream
   useEffect(() => {
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia(constraints)
+    let cameraStream = null; // Track the camera stream
+
+    const handleCameraStream = (stream) => {
+      if (videoRef.current) {
+        videoRef.current.srcObject = stream;
+      }
+    };
+
+    if (isCameraOn && navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices
+        .getUserMedia(constraints)
         .then((stream) => {
-          // Update the video source once the stream is available
-          if (videoRef.current) {
-            videoRef.current.srcObject = stream;
-          }
+          cameraStream = stream; // Save the camera stream reference
+          handleCameraStream(cameraStream); // Update the video source once the stream is available
         })
         .catch((error) => {
           console.error('Error accessing the camera:', error);
         });
-    } else {
-      console.error('getUserMedia API is not supported.');
     }
-  }, [constraints]);
+
+    // Cleanup: Stop the camera stream when component unmounts or camera is turned off
+    return () => {
+      if (cameraStream) {
+        cameraStream.getTracks().forEach((track) => {
+          track.stop();
+        });
+      }
+    };
+  }, [constraints, isCameraOn]);
 
   // Apply CSS to hide the video element
   const videoStyle = {
