@@ -65,7 +65,7 @@ const Main = () => {
             </Box>
             <Box sx={{ display: { sm: "none", xs: "block" } }} >
                 <div style={{ display: "flex", justifyContent: "right", position: "relative", marginTop: "10%" }}>
-                    <p id='titleh' >Welcome to DEEP UI</p>
+                    <p id='titleh' className='titleh' >Welcome to DEEP UI</p>
                     <img id='text1' src={text1} alt="" />
                 </div>
                 <h3 style={{ color: "white", textAlign: "center", marginTop: "20%" }} >Our Products</h3>

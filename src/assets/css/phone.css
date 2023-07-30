@@ -65,6 +65,9 @@
         font-size: 25px !important;
         margin: 0 5px;
     }
+    .titleh{
+    font-size:50px !important;
+    }
     #phone{
         flex-direction: column;
     }

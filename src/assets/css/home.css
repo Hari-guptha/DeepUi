@@ -32,11 +32,11 @@
 }
 
 .titleh {
-    font-size: 84px;
-    font-weight: 800;
-    color: #787777;
-    margin: 3% 10%;
-    line-height: 100%;
+    font-size: 84px !important;
+    font-weight: 800 !important;
+    color: #787777 ;
+    margin: 3% 10% !important;
+    line-height: 100% !important;
 }
 
 #ctext {
